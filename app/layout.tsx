@@ -1,6 +1,6 @@
 import Navbar from '@/components/navbar';
 import './globals.css';
-import { IBM_Plex_Sans_Condensed,Inter } from 'next/font/google';
+import { IBM_Plex_Sans_Condensed, Inter } from 'next/font/google';
 import Footer from '@/components/footer';
 
 const ibm = IBM_Plex_Sans_Condensed({
@@ -25,10 +25,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={`${ibm.className} ${ibm.variable}`}>
-        <Navbar/>
+      <body className={`${ibm.className} ${ibm.variable} ${inter.variable}`}>
+        <Navbar />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

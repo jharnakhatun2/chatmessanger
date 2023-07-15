@@ -13,6 +13,7 @@ module.exports = {
     extend: {
       fontFamily: {
         ibm: 'var(--IBM)',
+        inter: 'var(--Inter)',
       },
       colors: {
         border: 'hsl(var(--border))',
