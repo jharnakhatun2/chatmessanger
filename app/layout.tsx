@@ -1,15 +1,21 @@
-
+import Navbar from '@/components/navbar';
 import './globals.css';
-import { Poppins } from 'next/font/google';
+import { IBM_Plex_Sans_Condensed,Inter } from 'next/font/google';
+import Footer from '@/components/footer';
 
-const poppins = Poppins({
+const ibm = IBM_Plex_Sans_Condensed({
+  subsets: ['latin'],
+  weight: ['300', '100', '400', '200', '500', '600', '700'],
+  variable: '--IBM',
+});
+const inter = Inter({
   subsets: ['latin'],
   weight: ['300', '100', '400', '200', '500', '600', '700', '800', '900'],
-  variable: '--poppins',
+  variable: '--Inter',
 });
 
 export const metadata = {
-  title: 'Next | SohanEmon',
+  title: 'Konsulta',
 };
 
 export default function RootLayout({
@@ -19,8 +25,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={`${poppins.className} ${poppins.variable}`}>
+      <body className={`${ibm.className} ${ibm.variable}`}>
+        <Navbar/>
         {children}
+        <Footer/>
       </body>
     </html>
   );
