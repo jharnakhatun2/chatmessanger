@@ -19,9 +19,9 @@ export default function Button({
         "h-12 whitespace-nowrap px-9 text-xl w-fit transition-all",
         "bg-primary text-primary-foreground",
         {
-          "w-[285.01px] text-primary bg-background border border-primary rounded-lg text-center font-inter":
+          "w-[17.5rem] text-primary bg-background border border-primary rounded-lg text-center font-inter":
             outline,
-          "w-[285.01px] text-background bg-primary rounded-lg text-center font-inter":
+          "w-[17.5rem] text-background bg-primary rounded-lg text-center font-inter":
             secondary,
         },
         className

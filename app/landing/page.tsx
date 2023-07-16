@@ -7,12 +7,12 @@ export default function Landing() {
   return (
     <section className="p-6 dark:bg-gray-800 dark:text-gray-100">
       <div className="container grid gap-6 mx-auto text-center grid-cols-1 lg:grid-cols-2">
-        <div className="w-full px-6 py-16 rounded-3xl border">
+        <div className="w-full px-6 py-16 rounded-3xl border mx-auto">
           <h1 className="text-5xl font-extrabold dark:text-gray-50">
             Välkommen till <span className="text-secondary">Konsulta.se</span>
           </h1>
 
-          <div className="block lg:flex gap-5 my-10">
+          <div className="block lg:flex gap-2 my-10">
             <Link href="/login">
               <BorderButton outline>Logga in</BorderButton>
             </Link>
