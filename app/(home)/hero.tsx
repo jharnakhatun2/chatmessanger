@@ -3,7 +3,7 @@ import Searchbar from "./searchbar";
 
 export default function Hero() {
   return (
-    <div className="container ">
+    <div className="lg:container ">
       <div className="items-center lg:flex flex-row-reverse">
         <div className="flex items-center justify-center w-full lg:w-1/2">
           <Image
@@ -16,14 +16,16 @@ export default function Hero() {
         </div>
         <div className="w-full lg:w-1/2 lg:pl-16">
           <div className="flex ">
-            <h1 className="text-3xl font-semibold text-[#53CCD1] dark:text-white lg:text-[4rem] leading-none">
+            <h1 className="text-3xl font-semibold text-[#53CCD1] dark:text-white lg:text-[4.8rem] leading-none whitespace-nowrap">
               Alla
-              <span className="text-[#404040]"> konsultuppdrag samlade </span>
+              <span className="text-[#404040]">
+                {" "}
+                konsultuppdrag <br /> samlade{" "}
+              </span>
               på en sida
             </h1>
           </div>
-          <div className="bg-primary z-20">
-            <h1 className="text-primary text-7xl">Hello</h1>
+          <div className="relative bg-white z-20 p-2 rounded my-5">
             <Searchbar />
           </div>
         </div>

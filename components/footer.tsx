@@ -1,5 +1,3 @@
 export default function Footer() {
-  return (
-    <div>footer</div>
-  )
+  return <div className="bg-background h-[130px]"></div>;
 }

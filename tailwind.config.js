@@ -7,12 +7,13 @@ module.exports = {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1400px",
+        "2xl": "1728px",
       },
     },
     extend: {
       fontFamily: {
         ibm: "var(--IBM)",
+        inter: "var(--Inter)",
       },
       colors: {
         border: "hsl(var(--border))",
