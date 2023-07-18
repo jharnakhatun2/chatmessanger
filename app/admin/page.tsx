@@ -2,25 +2,34 @@ import Button from "@/components/ui/button";
 import Image from "next/image";
 
 export default function Admin() {
+  // const features = [
+  //   {
+  //     icon:
+  //   }
+  // ]
+
   return (
-    <section className="px-28">
+    <section className="px-0 lg:px-20 py-10">
       <div className="container">
-        <div className="flex items-center gap-2">
-          <Image
-            className=""
-            src="/assets/images/Skärmavbild 2023-06-30 kl. 19.53 1.png"
-            width={122}
-            height={122}
-            alt=""
-          />
-          <div className="font-inter">
-            <h3 className="text-black font-medium">Sara Ekblom</h3>
-            <p className="text-[#636363]">Läkarleasing AB</p>
+        <div className="flex flex-col gap-3">
+          <div className="flex items-center gap-3">
+            <Image
+              className=""
+              src="/assets/images/Skärmavbild 2023-06-30 kl. 19.53 1.png"
+              width={122}
+              height={122}
+              alt=""
+            />
+            <div className="font-inter">
+              <h3 className="text-black font-medium">Sara Ekblom</h3>
+              <p className="text-[#636363]">Läkarleasing AB</p>
+            </div>
           </div>
+          <Button outline>Redigera profil</Button>
         </div>
-        <Button outline>Redigera profil</Button>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-          <div className="bg-accent text-center p-20 rounded-2xl">
+
+        <div className="mx-auto grid md:justify-center lg:justify-center gap-5 sm:grid-cols-2 lg:grid-cols-3 py-10">
+          <div className="bg-accent text-center rounded-2xl flex flex-col items-center justify-center max-w-[340px] py-10 px-3">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="50"
@@ -55,7 +64,8 @@ export default function Admin() {
               Skapa annons
             </h3>
           </div>
-          <div className="bg-accent text-center p-20 rounded-2xl">
+
+          <div className="bg-accent text-center rounded-2xl flex flex-col items-center justify-center max-w-[340px] py-10 px-3">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="50"
@@ -74,7 +84,7 @@ export default function Admin() {
             </svg>
             <h3 className="text-primary text-[1.9rem] font-medium">Chatten</h3>
           </div>
-          <div className="bg-accent text-center p-20 rounded-2xl">
+          <div className="bg-accent text-center rounded-2xl flex flex-col items-center justify-center max-w-[340px] py-10 px-3">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="50"
@@ -109,7 +119,7 @@ export default function Admin() {
               Konto inställningar
             </h3>
           </div>
-          <div className="bg-accent text-center p-20 rounded-2xl">
+          <div className="bg-accent text-center rounded-2xl flex flex-col items-center justify-center max-w-[340px] py-10 px-3">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="50"
