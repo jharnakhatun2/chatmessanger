@@ -1,13 +1,13 @@
-import RadixSelect from "./radix-select";
+import RadixSelect from './radix-select';
 
 export default function Searchbar() {
   return (
-    <div className="w-full block lg:flex gap-3">
+    <div className='gap-3 w-[130%] p-2 my-5 bg-white rounded relative z-10 lg:flex'>
       <RadixSelect />
       <RadixSelect />
-      <button className=" bg-secondary px-20 rounded">Sök</button>
+      <button className='px-20 rounded bg-secondary'>Sök</button>
     </div>
   );
 }
-export const jobSelect = ["one", "two", "three", "four"];
-export const serviceSelect = ["five", "six", "seven", "eight"];
+export const jobSelect = ['one', 'two', 'three', 'four'];
+export const serviceSelect = ['five', 'six', 'seven', 'eight'];
