@@ -16,12 +16,12 @@ export default function Button({
     <button
       {...props}
       className={cn(
-        "h-12 whitespace-nowrap px-9 text-xl w-fit transition-all",
+        "h-12 whitespace-nowrap text-xl transition-all",
         "bg-primary text-primary-foreground",
         {
-          "w-[17.5rem] text-primary bg-background border border-primary rounded-lg text-center font-inter":
+          "w-3/4 lg:w-[17.5rem] text-primary bg-background border border-primary rounded-lg text-center font-inter":
             outline,
-          "w-[17.5rem] text-background bg-primary rounded-lg text-center font-inter":
+          "w-3/4 lg:w-[17.5rem] text-background bg-primary rounded-lg text-center font-inter":
             secondary,
         },
         className

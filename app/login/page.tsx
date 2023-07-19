@@ -8,13 +8,13 @@ export default function Login() {
   return (
     <section className="p-6 bg-white">
       <div className="container grid gap-6 mx-auto text-center grid-cols-1 lg:grid-cols-2">
-        <div className="container relative max-w-[834px] max-h-[958px] rounded-2xl border ">
+        <div className="container max-w-[834px] max-h-[958px] rounded-2xl border flex flex-col justify-between">
           <Header />
-          <div className="w-full ">
+          <div className="w-full">
             <h1 className="text-[2.8rem] font-semibold text-primary">
               Välkommen tillbaka
             </h1>
-            <p className="text-primary text-[1.7rem] font-medium">
+            <p className="text-primary text-[1.3rem] font-medium">
               Logga in och börja chatta med <br />
               bemanningsbolag
             </p>
@@ -93,12 +93,12 @@ export default function Login() {
                 </Link>
               </form>
             </div>
-            <div className="absolute bottom-0 w-[80%] mx-auto">
-              <p>Logga in via sociala media</p>
-              <div className="flex gap-2 justify-center items-center py-3">
-                <Facebook className="text-primary border border-primary rounded-full w-[35px] h-[35px] p-[5px]" />
-                <Instagram className="text-primary border border-primary rounded-full w-[35px] h-[35px] p-[5px]" />
-              </div>
+          </div>
+          <div className="pb-5">
+            <p>Logga in via sociala media</p>
+            <div className="flex gap-2 justify-center items-center py-3">
+              <Facebook className="text-primary border border-primary rounded-full w-[35px] h-[35px] p-[5px]" />
+              <Instagram className="text-primary border border-primary rounded-full w-[35px] h-[35px] p-[5px]" />
             </div>
           </div>
         </div>
