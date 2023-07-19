@@ -2,7 +2,7 @@ import React from "react";
 
 export default function RadixSelect() {
   return (
-    <div className="relative inline-flex">
+    <div className="relative w-full ">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="14"
@@ -25,7 +25,7 @@ export default function RadixSelect() {
           fillRule="nonzero"
         />
       </svg>
-      <select className="rounded text-foreground h-10 px-10 bg-background hover:border-none focus:outline-none appearance-none ">
+      <select className="rounded-xl text-center text-foreground py-3 px-10 hover:border-none focus:outline-none appearance-none bg-[#f4f2f2] w-full">
         <option>Choose a color</option>
         <option>Red</option>
         <option>Blue</option>
