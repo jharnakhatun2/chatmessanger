@@ -2,64 +2,6 @@ import Divider from "@/components/ui/divider";
 import { ArrowLeft } from "lucide-react";
 import Image from "next/image";
 
-const userInfo = [
-  {
-    id: 1,
-    image: "/assets/images/Skärmavbild 2023-05-28 kl. 14.16 1.png",
-    title: "SSK, Avdelning, Stad",
-    name: "Företagests namn",
-    period: "Period",
-    info: "Info",
-    time: "320-400 kr/timme",
-    description:
-      "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text ",
-  },
-  {
-    id: 2,
-    image: "/assets/images/Skärmavbild 2023-05-28 kl. 14.16 1.png",
-    title: "SSK, Avdelning, Stad",
-    name: "Företagests namn",
-    period: "Period",
-    info: "Info",
-    time: "320-400 kr/timme",
-    description:
-      "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text ",
-  },
-  {
-    id: 3,
-    image: "/assets/images/Skärmavbild 2023-05-28 kl. 14.16 1.png",
-    title: "SSK, Avdelning, Stad",
-    name: "Företagests namn",
-    period: "Period",
-    info: "Info",
-    time: "320-400 kr/timme",
-    description:
-      "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text ",
-  },
-  {
-    id: 4,
-    image: "/assets/images/Skärmavbild 2023-05-28 kl. 14.16 1.png",
-    title: "SSK, Avdelning, Stad",
-    name: "Företagests namn",
-    period: "Period",
-    info: "Info",
-    time: "320-400 kr/timme",
-    description:
-      "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text ",
-  },
-  {
-    id: 5,
-    image: "/assets/images/Skärmavbild 2023-05-28 kl. 14.16 1.png",
-    title: "SSK, Avdelning, Stad",
-    name: "Företagests namn",
-    period: "Period",
-    info: "Info",
-    time: "320-400 kr/timme",
-    description:
-      "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text ",
-  },
-];
-
 export default function page() {
   return (
     <section className="px-0 lg:px-20 py-10">
@@ -151,14 +93,4 @@ export default function page() {
       </div>
     </section>
   );
-}
-
-{
-  userInfo.map((data, index) => {
-    return (
-      <div key={index} className="flex justify-between items-center py-6">
-        <div className="flex gap-5"></div>
-      </div>
-    );
-  });
 }
