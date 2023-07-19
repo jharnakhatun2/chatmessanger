@@ -14,10 +14,10 @@ export default function Hero() {
             alt=""
           />
         </div>
-        <div className="-mt-[45%] md:-mt-[20%] lg:-mt-0 order-first w-full lg:pl-16 px-5 lg:px-0">
-          <h1 className="text-4xl xl:text-[4.8rem] leading-none font-semibold text-[#53CCD1] pb-5">
+        <div className="-mt-[45%] md:-mt-[30%] lg:-mt-0 order-first w-full lg:pl-16 px-5 lg:px-0">
+          <h1 className="text-4xl md:text-6xl xl:text-[4.8rem] leading-none font-semibold text-[#53CCD1] pb-5">
             Alla{" "}
-            <span className="text-white md:text-[#404040]">
+            <span className="text-white lg:text-[#404040]">
               konsultuppdrag samlade
             </span>{" "}
             på en sida

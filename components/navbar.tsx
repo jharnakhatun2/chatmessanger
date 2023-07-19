@@ -8,19 +8,19 @@ import Link from "next/link";
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <section className="bg-accent">
-      <nav className="container flex items-center justify-between p-2 lg:py-3 lg:px-20">
+    <section className="bg-white lg:bg-accent">
+      <nav className="container flex items-center justify-between px-3 py-2 md:px-5 md:py-5 lg:py-3 lg:px-20">
         {!isMenuOpen ? (
           <AlignJustify
             onClick={() => setIsMenuOpen(true)}
             size={36}
-            className="cursor-pointer md:hidden lg:hidden text-background bg-primary"
+            className="cursor-pointer lg:hidden text-background bg-secondary rounded-full p-1"
           />
         ) : (
           <X
             onClick={() => setIsMenuOpen(false)}
             size={36}
-            className="cursor-pointer md:hidden lg:hidden text-primary"
+            className="cursor-pointer lg:hidden text-secondary"
           />
         )}
         <Brand />
@@ -29,13 +29,13 @@ export default function Navbar() {
           <AlignJustify
             onClick={() => setIsMenuOpen(true)}
             size={36}
-            className="cursor-pointer hidden md:flex lg:hidden text-background bg-primary"
+            className="cursor-pointer hidden  text-background bg-primary"
           />
         ) : (
           <X
             onClick={() => setIsMenuOpen(false)}
             size={36}
-            className="cursor-pointer lg:hidden text-primary"
+            className="cursor-pointer hidden  text-primary"
           />
         )}
       </nav>
@@ -77,15 +77,15 @@ const NavContentMob = ({ setIsMenuOpen }: { setIsMenuOpen: Function }) => {
             </h2>
           </li>
         ))}
-        <Extra />
       </ul>
+      <Extra />
     </>
   );
 };
 
 const Extra = () => {
   return (
-    <h3 className="capitalize flex items-center gap-[12%] bg-secondary rounded-full px-5 py-2 text-white font-inter">
+    <h3 className="capitalize flex items-center gap-[12%] bg-secondary rounded-xl lg:rounded-full px-5 py-2 text-white font-inter">
       <Link href="/landing">Logga in</Link>
     </h3>
   );

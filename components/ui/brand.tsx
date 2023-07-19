@@ -9,11 +9,9 @@ export default function Brand() {
         width={50}
         height={63}
         alt="logo"
-        className="hidden"
+        className=""
       />
-      <h1 className="text-3xl  md:text-5xl text-secondary lg:text-black">
-        Konsulta
-      </h1>
+      <h1 className="text-3xl font-inter text-primary">Konsulta</h1>
     </Link>
   );
 }

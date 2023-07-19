@@ -8,18 +8,22 @@ export default function Admin() {
     {
       title: "Skapa annons",
       icon: "/assets/icons/plus-circle.svg",
+      route: "/",
     },
     {
       title: "Chatten",
       icon: "/assets/icons/message-circle.svg",
+      route: "/chat",
     },
     {
       title: "Konto inställningar",
       icon: "/assets/icons/settings.svg",
+      route: "/",
     },
     {
       title: "Mina annonser",
       icon: "/assets/icons/edit.svg",
+      route: "/listings",
     },
   ];
 
@@ -46,23 +50,26 @@ export default function Admin() {
         <div className="mx-auto grid md:justify-center lg:justify-center gap-5 sm:grid-cols-2 lg:grid-cols-3 py-6">
           {data.map((item, index) => {
             return (
-              <div
-                key={index}
-                className="bg-accent text-center rounded-2xl flex flex-col items-center justify-center max-w-[340px] py-10 px-3"
-              >
-                <Image
-                  className=""
-                  src={item.icon}
-                  width={50}
-                  height={50}
-                  alt=""
-                />
-                <Link href="/">
-                  <h3 className="text-primary text-[1.9rem] font-medium">
-                    {item.title}
-                  </h3>
+              <>
+                <Link href={item.route}>
+                  <div
+                    key={index}
+                    className="bg-accent text-center rounded-2xl flex flex-col items-center justify-center max-w-[340px] py-10 px-3"
+                  >
+                    <Image
+                      className=""
+                      src={item.icon}
+                      width={50}
+                      height={50}
+                      alt=""
+                    />
+
+                    <h3 className="text-primary text-[1.9rem] font-medium">
+                      {item.title}
+                    </h3>
+                  </div>
                 </Link>
-              </div>
+              </>
             );
           })}
         </div>

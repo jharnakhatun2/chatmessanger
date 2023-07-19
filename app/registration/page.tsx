@@ -1,5 +1,6 @@
 import { Facebook, Instagram, User } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function Registration() {
@@ -146,12 +147,13 @@ export default function Registration() {
                 />
               </div>
 
-              <button
-                type="submit"
+              <Link
+                href="/admin"
+                role="button"
                 className="block w-1/2 mx-auto bg-primary mt-4 py-2 rounded-2xl font-inter text-[1.13rem] text-white font-semibold mb-2"
               >
                 Skapa konto
-              </button>
+              </Link>
             </form>
           </div>
           <div>
