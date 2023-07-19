@@ -26,9 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${ibm.className} ${ibm.variable} ${inter.variable}`}>
-        <Navbar />
         {children}
-        <Footer />
       </body>
     </html>
   );
