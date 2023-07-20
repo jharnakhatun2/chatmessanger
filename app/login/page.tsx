@@ -1,26 +1,40 @@
 import Header from "@/components/ui/header";
-import { Facebook, Instagram } from "lucide-react";
+import { ArrowLeft, Facebook, Instagram } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 export default function Login() {
   return (
-    <section className="p-6 bg-white">
+    <section className="lg:p-6 py-6 bg-white">
       <div className="container grid gap-6 mx-auto text-center grid-cols-1 lg:grid-cols-2">
-        <div className="container max-w-[834px] max-h-[958px] rounded-2xl border flex flex-col justify-between">
+        <div className="max-w-[834px] max-h-[958px] rounded-2xl lg:border flex flex-col justify-between">
           <Header />
+          <div className="lg:hidden">
+            <Link href="/landing">
+              <ArrowLeft className="text-primary border-2 border-primary rounded-full p-[1px]" />
+            </Link>
+            <div className="flex justify-center py-5">
+              <Image
+                src={"/assets/images/Group 69.svg"}
+                width={70}
+                height={87}
+                alt="logo"
+                className="w-[30%] md:w-[22%]"
+              />
+            </div>
+          </div>
           <div className="w-full">
-            <h1 className="text-[2.8rem] font-semibold text-primary">
+            <h1 className="text-3xl md:text-[2.8rem] font-semibold text-primary">
               Välkommen tillbaka
             </h1>
-            <p className="text-primary text-[1.3rem] font-medium">
+            <p className="py-2 lg:py-5 text-primary text-md md:text-[1.3rem] font-medium">
               Logga in och börja chatta med <br />
               bemanningsbolag
             </p>
-            <div className="my-10">
+            <div className="my-5">
               <form className="bg-white">
-                <div className="flex w-1/2 justify-center items-center border-2 border-primary py-2 px-3 rounded-2xl mb-4 mx-auto">
+                <div className="flex w-full lg:w-2/4 justify-center items-center border-2 border-primary py-2 px-3 rounded-full lg:rounded-2xl mb-4 mx-auto">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="30"
@@ -44,14 +58,14 @@ export default function Login() {
                     />
                   </svg>
                   <input
-                    className="pl-2 outline-none border-none placeholder:text-secondary"
+                    className="outline-none border-none placeholder:text-secondary text-center"
                     type="email"
                     name=""
                     id=""
                     placeholder="Mejladress"
                   />
                 </div>
-                <div className="flex w-1/2 justify-center items-center border-2 border-primary py-2 px-3 rounded-2xl mb-4 mx-auto">
+                <div className="flex w-full lg:w-2/4 justify-center items-center border-2 border-primary py-2 px-3 rounded-full lg:rounded-2xl mb-4 mx-auto">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="30"
@@ -75,7 +89,7 @@ export default function Login() {
                     />
                   </svg>
                   <input
-                    className="pl-2 outline-none border-none placeholder:text-secondary"
+                    className="outline-none border-none placeholder:text-secondary text-center"
                     type="password"
                     name=""
                     id=""
@@ -87,14 +101,17 @@ export default function Login() {
                   href="/admin"
                   role="button"
                   type="submit"
-                  className="block w-1/2 mx-auto bg-primary mt-4 py-2 rounded-2xl font-inter text-[1.13rem] text-white font-semibold mb-2"
+                  className="block w-full lg:w-2/4 mx-auto bg-primary mt-4 py-3 rounded-full lg:rounded-2xl font-inter text-[1.13rem] text-white font-semibold mb-2"
                 >
                   Logga in
                 </Link>
+                <p className="lg:hidden text-sm pt-2 text-primary">
+                  Glömt lösenord?
+                </p>
               </form>
             </div>
           </div>
-          <div className="pb-5">
+          <div className="pb-5 text-primary">
             <p>Logga in via sociala media</p>
             <div className="flex gap-2 justify-center items-center py-3">
               <Facebook className="text-primary border border-primary rounded-full w-[35px] h-[35px] p-[5px]" />
@@ -102,7 +119,7 @@ export default function Login() {
             </div>
           </div>
         </div>
-        <div className="max-w-[834px] max-h-[958px] rounded-2xl ">
+        <div className="max-w-[834px] max-h-[958px] hidden lg:flex rounded-2xl ">
           <Image
             className="w-full h-full lg:flex"
             src="/assets/images/image 40.png"

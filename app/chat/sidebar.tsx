@@ -27,7 +27,7 @@ const data = [
 
 export default function Sidebar() {
   return (
-    <div className=" flex flex-col justify-between items-center w-[30%] h-[100vh] p-3 bg-background rounded-2xl">
+    <div className=" flex flex-col justify-between items-center w-[25%] h-[100vh] p-3 bg-background rounded-2xl">
       <Brand />
       <div className="leading-10 font-inter">
         {data.map((item, index) => {

@@ -39,7 +39,7 @@ const userInfo = [
 ];
 export default function Chatbar() {
   return (
-    <div className="bg-background rounded-l-2xl p-5 w-[35%]">
+    <div className="bg-background rounded-l-2xl p-5 w-[50%]">
       {userInfo.map((item, index) => {
         return (
           <div key={index} className="flex items-center gap-3 py-2">

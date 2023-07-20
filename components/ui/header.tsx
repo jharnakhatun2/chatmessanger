@@ -8,7 +8,7 @@ import Brand from "./brand";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <section className="bg-white rounded-2xl relative">
+    <section className="bg-white rounded-2xl relative hidden lg:flex">
       <nav className=" container flex items-center justify-between px-3 py-2 md:px-5 md:py-2 ">
         <Brand />
         {!isMenuOpen ? (
