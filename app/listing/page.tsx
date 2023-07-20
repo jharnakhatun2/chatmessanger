@@ -1,15 +1,18 @@
 import Divider from "@/components/ui/divider";
 import { ArrowLeft } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function page() {
   return (
     <section className="px-0 lg:px-20 py-10">
       <div className="container">
-        <div className="flex items-center cursor-pointer text-primary">
-          <ArrowLeft />
-          <h2 className="font-inter">Din sökning</h2>
-        </div>
+        <Link href="/listings">
+          <div className="flex items-center cursor-pointer text-primary">
+            <ArrowLeft />
+            <h2 className="font-inter">Din sökning</h2>
+          </div>
+        </Link>
         <div className="py-6">
           <div>
             <Image
@@ -85,7 +88,9 @@ export default function page() {
                     stroke-linejoin="round"
                   />
                 </svg>
-                <p className="text-[1.4rem] pl-2">Chatta nu</p>
+                <Link href="/chat">
+                  <p className="text-[1.4rem] pl-2">Chatta nu</p>
+                </Link>
               </div>
             </div>
           </div>
