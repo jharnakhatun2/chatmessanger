@@ -33,7 +33,7 @@ export default function Admin() {
     <>
       <Nav />
       <NavMobile />
-      <section className="px-0 lg:px-20 py-0 md:py-10 bg-[f4f4f4]">
+      <section className="px-0 lg:px-20 py-0 md:py-10 bg-[#f4f4f4]">
         {/* For medium and large device */}
         <div className="container hidden md:flex flex-col">
           <div className="flex flex-col gap-3 items-center lg:items-start">
@@ -106,7 +106,7 @@ export default function Admin() {
             </div>
           </div>
           <div className="w-full absolute -mt-8 text-muted">
-            <Link href="/chat">
+            <Link href="/chatten">
               <div className="w-11/12 mx-auto flex justify-between items-center bg-white p-3 rounded-3xl shadow-lg">
                 <div className="flex gap-5 items-center">
                   <MessageCircle className="bg-green-500 text-white p-[2px] rounded-xl w-[35px] h-[35px]" />
@@ -126,7 +126,7 @@ export default function Admin() {
                 <ChevronRight className="text-muted" />
               </div>
               <div>
-                <Link href="/">
+                <Link href="/profile">
                   <div className=" flex justify-between items-center py-3">
                     <div className="flex gap-5 items-center">
                       <User2 className="bg-[#5395d1] text-white p-[2px] rounded-xl w-[35px] h-[35px]" />

@@ -48,7 +48,7 @@ const NavContentMob = ({ setIsMenuOpen }: { setIsMenuOpen: Function }) => {
       <ul className="absolute inset-x-0 bg-background p-3 flex flex-col items-start border-t-[1px] my-20 pl-16 border-accent">
         {nav.map((_) => (
           <li onClick={() => setIsMenuOpen(false)} key={_}>
-            <h2 className="">
+            <h2 className="text-xl">
               <Link href={_}>{_}</Link>
             </h2>
           </li>
