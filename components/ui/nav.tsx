@@ -37,7 +37,7 @@ export default function Nav() {
 const NavContentMob = ({ setIsMenuOpen }: { setIsMenuOpen: Function }) => {
   return (
     <>
-      <ul className="absolute inset-x-0 bg-accent border-t-2 border-t-secondary py-5 px-20 flex flex-col items-start">
+      <ul className="absolute top-20 inset-x-0 bg-accent border-t-2 border-t-secondary py-5 px-28 flex flex-col items-start">
         {nav.map((_) => (
           <li onClick={() => setIsMenuOpen(false)} key={_}>
             <h2 className="">

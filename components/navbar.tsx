@@ -69,10 +69,10 @@ const NavContent = () => {
 const NavContentMob = ({ setIsMenuOpen }: { setIsMenuOpen: Function }) => {
   return (
     <>
-      <ul className="absolute inset-x-0 bg-background p-8 flex flex-col items-start lg:hidden">
+      <ul className="absolute inset-x-0 bg-background px-8 py-3 flex flex-col items-start lg:hidden border-t-[1px] border-accent">
         {nav.map((_) => (
           <li onClick={() => setIsMenuOpen(false)} key={_}>
-            <h2 className="">
+            <h2 className="text-xl leading-8">
               <Link href={_}>{_}</Link>
             </h2>
           </li>
