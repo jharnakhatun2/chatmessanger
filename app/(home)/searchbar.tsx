@@ -16,3 +16,13 @@ export default function Searchbar() {
 }
 export const jobSelect = ["one", "two", "three", "four"];
 export const serviceSelect = ["five", "six", "seven", "eight"];
+export const jobSelect = ["one", "two", "three", "four"];
+export const serviceSelect = ["five", "six", "seven", "eight"];
+
+{
+  /* <div className="gap-3 w-[130%] p-2 my-5 bg-white rounded relative z-10 lg:flex">
+  <RadixSelect />
+  <RadixSelect />
+  <button className="px-20 rounded bg-secondary">Sök</button>
+</div>; */
+}
