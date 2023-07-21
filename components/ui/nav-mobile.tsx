@@ -24,7 +24,9 @@ export default function NavMobile() {
           />
         )}
         <div>
-          <h1 className="text-3xl  md:text-5xl text-secondary">Konsulta</h1>
+          <Link href="/" className="text-3xl  md:text-5xl text-secondary">
+            Konsulta
+          </Link>
         </div>
         <User className="w-[35px] h-[35px] cursor-pointer md:hidden text-background bg-secondary rounded-full p-1" />
       </nav>
