@@ -17,10 +17,6 @@ export default function Slider2() {
   return (
     <>
       <Swiper
-        style={{
-          "--swiper-navigation-color": "#53CCD1",
-          "--swiper-pagination-color": "#53CCD1",
-        }}
         zoom={true}
         navigation={true}
         pagination={{
