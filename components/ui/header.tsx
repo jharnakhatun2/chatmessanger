@@ -33,7 +33,7 @@ export default function Header() {
 const NavContentMob = ({ setIsMenuOpen }: { setIsMenuOpen: Function }) => {
   return (
     <>
-      <ul className="absolute inset-x-0 bg-background p-3 flex flex-col items-start border-t-[1px] border-accent">
+      <ul className="absolute top-16 inset-x-0 bg-background px-10 py-3 flex flex-col items-start border-t-[1px] border-accent">
         {nav.map((_) => (
           <li onClick={() => setIsMenuOpen(false)} key={_}>
             <h2 className="">
