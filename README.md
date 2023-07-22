@@ -1,6 +1,6 @@
 
 ## Live Site
-[RealEstateGenius](https://konsulta.vercel.app/)
+[konsulta](https://konsulta.vercel.app/)
 
 ## Technologies
 - Next.js
