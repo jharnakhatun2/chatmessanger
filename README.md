@@ -1,6 +1,13 @@
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) and initialized with [`npx sohanemon`](https://github.com/sohanemon/ui-init-frontend)
+## Live Site
+[konsulta](https://konsulta.vercel.app/)
 
+## Technologies
+- Next.js
+- Typescript
+- Tailwind CSS
+- pnpm packages
+  
 ## Getting Started
 
 Initialize with useful libraries and structure your projects
