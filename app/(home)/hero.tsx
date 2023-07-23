@@ -25,16 +25,16 @@ export default function Hero() {
               på en sida
             </h1>
             <Searchbar />
-            <div className="flex font-inter divide-x-2 divide-primary items-center justify-center py-8 lg:hidden">
-              <div className="text-center pr-3 md:pr-8">
+            <div className="flex font-inter divide-x-2 divide-primary items-center justify-center py-7 lg:hidden">
+              <div className="text-center pr-2 md:pr-8">
                 <p className="text-sm text-primary">Konsulter</p>
                 <h1 className="text-2xl text-primary font-bold">+200</h1>
               </div>
-              <div className="text-center px-3 md:px-8">
+              <div className="text-center px-2 md:px-8">
                 <p className="text-sm text-primary">Jobbannonser</p>
                 <h1 className="text-2xl text-primary font-bold">+1000</h1>
               </div>
-              <div className="text-center pl-3 md:pl-8">
+              <div className="text-center pl-2 md:pl-8">
                 <p className="text-sm text-primary">Chatta med</p>
                 <h1 className="text-2xl text-primary font-bold">+20</h1>
               </div>
@@ -42,12 +42,12 @@ export default function Hero() {
           </div>
         </div>
       </section>
-      <section className="lg:hidden mx-5 pb-5">
+      <section className="lg:hidden mx-3 pb-5 mt-3">
         <div className="font-inter">
-          <p className="font-medium pt-3 text-[#adacac]">
+          <p className="font-medium pt-3 text-[#adacac] text-sm">
             Se de senaste annonserna:
           </p>
-          <h1 className="text-primary text-2xl font-medium">
+          <h1 className="text-primary text-xl font-medium">
             Hitta ditt nästa uppdrag!
           </h1>
         </div>
@@ -67,7 +67,7 @@ export default function Hero() {
               <div className="flex flex-col justify-center items-center gap-4">
                 <div className="bg-[#d9d9d9] w-[50px] h-[50px] rounded-full"></div>
                 <div>
-                  <span className="bg-secondary text-white px-3 py-2 rounded-xl">
+                  <span className="text-sm bg-secondary text-white px-3 py-2 rounded-xl">
                     Chatta nu
                   </span>
                 </div>

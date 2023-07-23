@@ -167,7 +167,7 @@ export default function Listing() {
       <section className="lg:hidden mx-5 h-[1320px]">
         <div className="pb-5">
           <div className="bg-accent shadow-lg flex gap-5 justify-center items-center py-2 rounded-2xl">
-            <select className="bg-accent text-xl text-primary px-8 focus:outline-none">
+            <select className="bg-accent text-xl text-primary px-6 focus:outline-none">
               <option>Sökfilter</option>
               <option>Option 2</option>
               <option>Option 3</option>
@@ -191,7 +191,7 @@ export default function Listing() {
                 <div className="flex flex-col justify-center items-center gap-4">
                   <div className="bg-[#d9d9d9] w-[50px] h-[50px] rounded-full"></div>
                   <div>
-                    <span className="bg-secondary text-white px-3 py-2 rounded-xl">
+                    <span className="bg-secondary text-white px-3 py-2 rounded-xl text-sm md:text-lg">
                       Chatta nu
                     </span>
                   </div>
