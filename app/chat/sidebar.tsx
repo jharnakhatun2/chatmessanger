@@ -6,28 +6,33 @@ const data = [
   {
     title: "Chaatt",
     icon: "/assets/icons/message-square.svg",
+    textColor: "#404040",
   },
   {
     title: "Bevakning",
     icon: "/assets/icons/folder-plus.svg",
+    textColor: "#c7c7c7c",
   },
   {
     title: "Profil",
     icon: "/assets/icons/user.svg",
+    textColor: "#c7c7c7c",
   },
   {
     title: "Logga ut",
     icon: "/assets/icons/log-out.svg",
+    textColor: "#c7c7c7c",
   },
   {
     title: "Inställningar",
     icon: "/assets/icons/settings1.svg",
+    textColor: "#c7c7c7c",
   },
 ];
 
 export default function Sidebar() {
   return (
-    <div className=" hidden lg:flex flex-col justify-between items-center w-[25%] h-[100vh] p-3 bg-background rounded-2xl ">
+    <div className=" hidden h-[100vh] lg:flex flex-col justify-between items-center p-3 bg-white rounded-2xl ">
       <Brand />
       <div className="leading-10 font-inter">
         {data.map((item, index) => {
@@ -40,7 +45,12 @@ export default function Sidebar() {
                 height={30}
                 alt=""
               />
-              <h2 className="text-xl">{item.title}</h2>
+              <h2
+                className={`text-xl text-[${item.textColor}]`}
+                style={{ color: `${item.textColor}` }}
+              >
+                {item.title}
+              </h2>
             </div>
           );
         })}

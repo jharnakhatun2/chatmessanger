@@ -6,15 +6,15 @@ import React from "react";
 
 export default function Registration() {
   return (
-    <section className="lg:p-6 pt-6 bg-white">
+    <section className="lg:p-6 bg-white">
       <div className="container grid gap-6 mx-auto text-center grid-cols-1 lg:grid-cols-2">
-        <div className="max-w-[834px] max-h-[958px] rounded-2xl lg:border flex flex-col justify-between">
+        <div className="h-[100vh] lg:h-full max-w-[834px] max-h-[958px] rounded-2xl lg:border flex flex-col justify-between">
           <Header />
-          <div className="lg:hidden">
+          <div className="lg:hidden pt-3">
             <Link href="/landing">
               <ArrowLeft className="text-primary border-2 border-primary rounded-full p-[1px]" />
             </Link>
-            <div className="flex justify-center py-5">
+            <div className="flex justify-center py-3">
               <Image
                 src={"/assets/images/Group 69.svg"}
                 width={70}
@@ -24,7 +24,7 @@ export default function Registration() {
               />
             </div>
           </div>
-          <div className="w-full lg:py-5">
+          <div className="w-full">
             <h1 className="text-4xl md:text-[3.8rem] font-semibold text-primary">
               Skapa ditt konto
             </h1>
@@ -32,7 +32,7 @@ export default function Registration() {
               Fyll i uppgifterna nedan och börja <br /> chatta med
               bemanningsbolag
             </p>
-            <div className="my-8 lg:my-0">
+            <div className="">
               <form className="bg-white">
                 <div className="flex w-full lg:w-2/4 justify-center items-center border-2 border-primary py-2 px-3 rounded-full lg:rounded-2xl mb-4 mx-auto">
                   <svg
@@ -186,7 +186,7 @@ export default function Registration() {
         <div className="max-w-[834px] max-h-[958px] hidden lg:flex rounded-2xl ">
           <Image
             className="w-full h-full lg:flex"
-            src="/assets/images/image 40.png"
+            src="/assets/images/image 41.png"
             width={923}
             height={899}
             alt=""

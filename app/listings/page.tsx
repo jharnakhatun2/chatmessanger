@@ -6,7 +6,21 @@ import { ArrowLeft, ChevronDown, Search } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-const userInfo = [
+interface CompType {
+  id: number | string;
+  image?: string;
+  name: string;
+  period: string;
+  title: string;
+  info: string;
+  time: string;
+  star?: string;
+  message?: string;
+  chat?: string;
+  elips?: string;
+}
+
+const userInfo: CompType[] = [
   {
     id: 1,
     image: "/assets/images/Skärmavbild 2023-05-28 kl. 14.16 1.png",
@@ -15,8 +29,8 @@ const userInfo = [
     period: "Period",
     info: "Info",
     time: "320-400 kr/timme",
-    description:
-      "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text ",
+    chat: "Chatta nu",
+    elips: "/assets/icons/Ellipse 5.svg",
   },
   {
     id: 2,
@@ -26,8 +40,8 @@ const userInfo = [
     period: "Period",
     info: "Info",
     time: "320-400 kr/timme",
-    description:
-      "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text ",
+    star: "/assets/icons/star.svg",
+    message: "/assets/icons/message-circle2.svg",
   },
   {
     id: 3,
@@ -37,8 +51,8 @@ const userInfo = [
     period: "Period",
     info: "Info",
     time: "320-400 kr/timme",
-    description:
-      "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text ",
+    chat: "Chatta nu",
+    elips: "/assets/icons/Ellipse 5.svg",
   },
   {
     id: 4,
@@ -48,8 +62,8 @@ const userInfo = [
     period: "Period",
     info: "Info",
     time: "320-400 kr/timme",
-    description:
-      "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text ",
+    chat: "Chatta nu",
+    elips: "/assets/icons/Ellipse 5.svg",
   },
   {
     id: 5,
@@ -59,8 +73,19 @@ const userInfo = [
     period: "Period",
     info: "Info",
     time: "320-400 kr/timme",
-    description:
-      "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text ",
+    star: "/assets/icons/star.svg",
+    message: "/assets/icons/message-circle2.svg",
+  },
+  {
+    id: 5,
+    image: "/assets/images/Skärmavbild 2023-05-28 kl. 14.16 1.png",
+    title: "SSK, Avdelning, Stad",
+    name: "Företagests namn",
+    period: "Period",
+    info: "Info",
+    time: "320-400 kr/timme",
+    chat: "Chatta nu",
+    elips: "/assets/icons/Ellipse 5.svg",
   },
 ];
 
@@ -164,10 +189,10 @@ export default function Listing() {
           </div>
         </div>
       </section>
-      <section className="lg:hidden mx-5 h-[1320px]">
+      <section className="lg:hidden mx-5 pb-5">
         <div className="pb-5">
-          <div className="bg-accent shadow-lg flex gap-5 justify-center items-center py-2 rounded-2xl">
-            <select className="bg-accent text-xl text-primary px-6 focus:outline-none">
+          <div className="bg-accent shadow flex gap-5 justify-center items-center py-2 rounded-2xl">
+            <select className="bg-accent text-sm lg:text-xl text-primary px-6 focus:outline-none">
               <option>Sökfilter</option>
               <option>Option 2</option>
               <option>Option 3</option>
@@ -180,7 +205,7 @@ export default function Listing() {
         {userInfo.map((item, index) => {
           return (
             <Link key={index} href="/listing">
-              <div className="flex justify-between items-center shadow-lg my-10 p-3 rounded-2xl">
+              <div className="flex justify-between items-center shadow-lg hover:shadow-xl my-10 p-3 rounded-2xl">
                 <div className="font-inter">
                   <h2 className="text-lg">{item.title}</h2>
                   <p className="font-semibold text-sm">{item.name}</p>
@@ -189,11 +214,45 @@ export default function Listing() {
                   <p className="text-secondary text-sm">Läs mer</p>
                 </div>
                 <div className="flex flex-col justify-center items-center gap-4">
-                  <div className="bg-[#d9d9d9] w-[50px] h-[50px] rounded-full"></div>
+                  {item.elips && (
+                    <div>
+                      <Image
+                        src={item.elips}
+                        width={50}
+                        height={50}
+                        alt="Star Icon"
+                        className="rounded-full"
+                      />
+                    </div>
+                  )}
+                  {item.star && (
+                    <div>
+                      <Image
+                        src={item.star}
+                        width={30}
+                        height={30}
+                        alt="Star Icon"
+                      />
+                    </div>
+                  )}
                   <div>
-                    <span className="bg-secondary text-white px-3 py-2 rounded-xl text-sm md:text-lg">
-                      Chatta nu
-                    </span>
+                    {item.message && (
+                      <div className="bg-secondary rounded-full p-1 ">
+                        <Image
+                          src={item.message}
+                          width={30}
+                          height={30}
+                          alt="Message Icon"
+                        />
+                      </div>
+                    )}
+                    {item.chat && (
+                      <div>
+                        <span className="text-sm bg-secondary text-white px-3 py-2 rounded-xl">
+                          {item.chat}
+                        </span>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>

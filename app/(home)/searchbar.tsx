@@ -7,7 +7,7 @@ export default function Searchbar() {
       <RadixSelect options={jobSelect} />
       <RadixSelect options={serviceSelect} />
       <Link href="/listings">
-        <div className="w-full bg-secondary px-24 py-3 rounded-xl text-center">
+        <div className="w-full bg-secondary text-white px-24 py-3 rounded-xl text-center">
           Sök
         </div>
       </Link>

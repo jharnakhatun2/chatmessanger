@@ -8,19 +8,21 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }) {
   return (
-    <section className="bg-gray-300">
-      <div className="container">
-        <div className="flex gap-5">
+    <>
+      <div className=" container  flex gap-5 bg-[#f1f1f1] p-10">
+        <div className="w-[20%]">
           <Sidebar />
-          <div className="w-full">
-            <Header />
-            <div className="flex mt-5 gap-2">
+        </div>
+        <div className="w-[80%] flex flex-col gap-5 h-screen">
+          <Header />
+          <div className="flex gap-2 flex-1">
+            <div className="w-6/12">
               <Chatbar />
-              {children}
             </div>
+            <div className="w-full h-full">{children}</div>
           </div>
         </div>
       </div>
-    </section>
+    </>
   );
 }

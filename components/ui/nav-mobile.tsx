@@ -38,7 +38,7 @@ export default function NavMobile() {
 const NavContentMob = ({ setIsMenuOpen }: { setIsMenuOpen: Function }) => {
   return (
     <>
-      <ul className="absolute inset-x-0 bg-white border-t-2 border-accent px-6 py-3 flex flex-col items-start md:hidden">
+      <ul className="absolute inset-x-0 bg-white border-t-2 border-accent px-6 py-3 flex flex-col items-start md:hidden z-20">
         {nav.map((_) => (
           <li onClick={() => setIsMenuOpen(false)} key={_}>
             <h2 className="text-xl">

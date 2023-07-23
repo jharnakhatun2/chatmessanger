@@ -46,7 +46,7 @@ export default function page() {
                   <p className="font-bold">Period</p>
                   <p className="font-bold">320-400 kr/timme</p>
                 </div>
-                <p className=" py-6 lg:py-10">
+                <p className=" py-6 lg:py-10 overlay">
                   Text Text Text Text Text Text Text Text Text Text Text Text
                   Text Text Text Text Text Text Text Text Text Text Text Text
                   Text Text Text Text Text Text Text Text Text Text Text Text
@@ -65,7 +65,7 @@ export default function page() {
                       <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                     </svg>
                   </div>
-                  <select className="block appearance-none w-full bg-white border border-secondary hover:border-secondary px-4 py-3 pl-5 rounded-lg shadow leading-tight focus:outline-none focus:shadow-outline text-secondary font-inter text-center">
+                  <select className=" text-sm block appearance-none w-full bg-white border border-secondary hover:border-secondary px-4 py-3 pl-12 rounded-lg shadow leading-tight focus:outline-none focus:shadow-outline text-secondary font-inter ">
                     <option>Visa hela beskrivningen</option>
                     <option>Option 2</option>
                     <option>Option 3</option>
@@ -91,26 +91,26 @@ export default function page() {
                     alt=""
                   />
                 </div>
-                <div className="flex gap-5 bg-secondary text-white justify-center items-center rounded-lg py-1">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="30"
-                    height="32"
-                    viewBox="0 0 30 32"
-                    fill="none"
-                  >
-                    <path
-                      d="M3.75 15.0269C3.74569 16.7516 4.13116 18.4529 4.875 19.9923C5.75695 21.837 7.11281 23.3886 8.79069 24.4733C10.4686 25.558 12.4022 26.133 14.375 26.1338C16.0248 26.1382 17.6524 25.7353 19.125 24.9577L26.25 27.4404L23.875 19.9923C24.6188 18.4529 25.0043 16.7516 25 15.0269C24.9992 12.9646 24.4492 10.9433 23.4116 9.18936C22.374 7.43539 20.8897 6.01805 19.125 5.0961C17.6524 4.31853 16.0248 3.91558 14.375 3.92008H13.75C11.1446 4.07034 8.68369 5.21992 6.83857 7.14872C4.99345 9.07752 3.89374 11.65 3.75 14.3736V15.0269Z"
-                      stroke="white"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                  <Link href="/chat">
+                <Link href="/message">
+                  <div className="flex gap-5 bg-secondary text-white justify-center items-center rounded-lg py-1">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="30"
+                      height="32"
+                      viewBox="0 0 30 32"
+                      fill="none"
+                    >
+                      <path
+                        d="M3.75 15.0269C3.74569 16.7516 4.13116 18.4529 4.875 19.9923C5.75695 21.837 7.11281 23.3886 8.79069 24.4733C10.4686 25.558 12.4022 26.133 14.375 26.1338C16.0248 26.1382 17.6524 25.7353 19.125 24.9577L26.25 27.4404L23.875 19.9923C24.6188 18.4529 25.0043 16.7516 25 15.0269C24.9992 12.9646 24.4492 10.9433 23.4116 9.18936C22.374 7.43539 20.8897 6.01805 19.125 5.0961C17.6524 4.31853 16.0248 3.91558 14.375 3.92008H13.75C11.1446 4.07034 8.68369 5.21992 6.83857 7.14872C4.99345 9.07752 3.89374 11.65 3.75 14.3736V15.0269Z"
+                        stroke="white"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
                     <p className="text-lg">Chatta nu</p>
-                  </Link>
-                </div>
+                  </div>
+                </Link>
               </div>
             </div>
           </div>

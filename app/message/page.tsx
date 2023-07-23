@@ -5,9 +5,9 @@ import Image from "next/image";
 export default function Message() {
   return (
     <>
-      <NavMobile />
-      <section className="bg-[#f5f5f5] h-[721px] flex flex-col justify-between">
+      <section className="bg-[#f5f5f5] h-[100vh] flex flex-col justify-between">
         <div>
+          <NavMobile />
           <div className="flex gap-6 items-center px-6 py-2 shadow-lg bg-white">
             <ChevronLeft className="text-[#a7a5a5]" />
             <div className="font-inter leading-5">

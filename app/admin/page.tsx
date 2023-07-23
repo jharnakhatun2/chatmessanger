@@ -33,7 +33,7 @@ export default function Admin() {
     <>
       <Nav />
       <NavMobile />
-      <section className="px-0 lg:px-20 py-0 md:py-10 bg-[#f4f4f4]">
+      <section className="px-0 lg:px-20 py-0 md:py-10 bg-white">
         {/* For medium and large device */}
         <div className="container hidden md:flex flex-col">
           <div className="flex flex-col gap-3 items-center lg:items-start">
@@ -83,7 +83,7 @@ export default function Admin() {
           </div>
         </div>
         {/* For mobile device only */}
-        <div className="pb-20 md:hidden">
+        <div className=" md:hidden">
           <div className="relative w-full h-[249.813px] flex justify-center items-center flex-col">
             <div className="bg-[url('https://i.ibb.co/cTjs5RN/bgImage.png')] bg-fit bg-no-repeat ">
               <div

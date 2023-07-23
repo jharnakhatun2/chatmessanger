@@ -6,11 +6,11 @@ import BorderButton from "@/components/ui/button";
 
 export default function Landing() {
   return (
-    <section className="lg:p-6 py-6  bg-white">
+    <section className="lg:p-6  bg-white">
       <div className="container grid gap-6 mx-auto text-center grid-cols-1 lg:grid-cols-2 ">
-        <div className=" max-w-[834px] max-h-[958px] rounded-2xl lg:border flex flex-col justify-between">
+        <div className="h-[100vh] lg:h-full max-w-[834px] max-h-[958px] rounded-2xl lg:border flex flex-col justify-between">
           <Header />
-          <div className="lg:hidden">
+          <div className="lg:hidden pt-3">
             <Link href="/">
               <ArrowLeft className="text-primary border-2 border-primary rounded-full p-[1px]" />
             </Link>
@@ -54,7 +54,7 @@ export default function Landing() {
         <div className="max-w-[834px] max-h-[958px] hidden lg:flex rounded-2xl ">
           <Image
             className="w-full h-full lg:flex"
-            src="/assets/images/image 40.png"
+            src="/assets/images/image 41.png"
             width={923}
             height={899}
             alt=""

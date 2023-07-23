@@ -25,7 +25,7 @@ export default function Chatten() {
               return (
                 <div key={index} className="py-3">
                   <Link href="/message">
-                    <div className="flex justify-between items-center bg-white px-3 py-2 rounded-3xl shadow-lg">
+                    <div className="flex justify-between items-center bg-white px-3 py-2 rounded-3xl shadow hover:shadow-lg">
                       <div className="flex gap-6 items-center">
                         <MessageCircle className="bg-green-500 text-white p-[2px] rounded-xl w-[35px] h-[35px]" />
                         <div>

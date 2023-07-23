@@ -39,14 +39,14 @@ const userInfo = [
 ];
 export default function Chatbar() {
   return (
-    <div className="bg-background rounded-l-2xl p-5 w-[50%]">
+    <div className="bg-white rounded-l-2xl px-5 h-[100%]">
       {userInfo.map((item, index) => {
         return (
-          <div key={index} className="flex items-center gap-3 py-2">
+          <div key={index} className="flex items-center py-2">
             <div className="w-[50px] h-[50px]">
               <Image src={item.image} width={50} height={50} alt="" />
             </div>
-            <div className="">
+            <div className="px-3">
               <p className="font-semibold text-xl">{item.title}</p>
               <p className="font-medium">{item.name}</p>
               <p className="">{item.message}</p>

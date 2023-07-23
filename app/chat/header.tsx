@@ -7,7 +7,7 @@ import { useState } from "react";
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <div className="relative container flex justify-between bg-background py-5 rounded-2xl">
+    <div className="w-full relative container flex justify-between bg-white py-2 rounded-2xl">
       <div className="flex">
         <div className="flex gap-5 items-center">
           <Image
@@ -45,7 +45,7 @@ export default function Header() {
 const NavContentMob = ({ setIsMenuOpen }: { setIsMenuOpen: Function }) => {
   return (
     <>
-      <ul className="absolute inset-x-0 bg-background p-3 flex flex-col items-start border-t-[1px] my-20 pl-16 border-accent">
+      <ul className="absolute inset-x-0 bg-white p-3 flex flex-col items-start border-t-[1px] my-20 pl-16 border-accent">
         {nav.map((_) => (
           <li onClick={() => setIsMenuOpen(false)} key={_}>
             <h2 className="text-xl">

@@ -1,7 +1,88 @@
 import Image from "next/image";
 import Searchbar from "./searchbar";
-import Link from "next/link";
 
+interface CompType {
+  id: number | string;
+  image?: string;
+  name: string;
+  period: string;
+  title: string;
+  info: string;
+  time: string;
+  star?: string;
+  message?: string;
+  chat?: string;
+  elips?: string;
+}
+
+const userInfo: CompType[] = [
+  {
+    id: 1,
+    image: "/assets/images/Skärmavbild 2023-05-28 kl. 14.16 1.png",
+    title: "SSK, Avdelning, Stad",
+    name: "Företagests namn",
+    period: "Period",
+    info: "Info",
+    time: "320-400 kr/timme",
+    chat: "Chatta nu",
+    elips: "/assets/icons/Ellipse 5.svg",
+  },
+  {
+    id: 2,
+    image: "/assets/images/Skärmavbild 2023-05-28 kl. 14.16 1.png",
+    title: "SSK, Avdelning, Stad",
+    name: "Företagests namn",
+    period: "Period",
+    info: "Info",
+    time: "320-400 kr/timme",
+    star: "/assets/icons/star.svg",
+    message: "/assets/icons/message-circle2.svg",
+  },
+  {
+    id: 3,
+    image: "/assets/images/Skärmavbild 2023-05-28 kl. 14.16 1.png",
+    title: "SSK, Avdelning, Stad",
+    name: "Företagests namn",
+    period: "Period",
+    info: "Info",
+    time: "320-400 kr/timme",
+    chat: "Chatta nu",
+    elips: "/assets/icons/Ellipse 5.svg",
+  },
+  {
+    id: 4,
+    image: "/assets/images/Skärmavbild 2023-05-28 kl. 14.16 1.png",
+    title: "SSK, Avdelning, Stad",
+    name: "Företagests namn",
+    period: "Period",
+    info: "Info",
+    time: "320-400 kr/timme",
+    chat: "Chatta nu",
+    elips: "/assets/icons/Ellipse 5.svg",
+  },
+  {
+    id: 5,
+    image: "/assets/images/Skärmavbild 2023-05-28 kl. 14.16 1.png",
+    title: "SSK, Avdelning, Stad",
+    name: "Företagests namn",
+    period: "Period",
+    info: "Info",
+    time: "320-400 kr/timme",
+    star: "/assets/icons/star.svg",
+    message: "/assets/icons/message-circle2.svg",
+  },
+  {
+    id: 5,
+    image: "/assets/images/Skärmavbild 2023-05-28 kl. 14.16 1.png",
+    title: "SSK, Avdelning, Stad",
+    name: "Företagests namn",
+    period: "Period",
+    info: "Info",
+    time: "320-400 kr/timme",
+    chat: "Chatta nu",
+    elips: "/assets/icons/Ellipse 5.svg",
+  },
+];
 export default function Hero() {
   return (
     <>
@@ -9,14 +90,21 @@ export default function Hero() {
         <div className="lg:container flex-row-reverse items-center grid-cols-2 lg:grid">
           <div className="flex items-center justify-center w-full">
             <Image
-              className="w-full h-full"
+              className="w-full h-full hidden lg:flex"
               src="/assets/images/image 40.png"
               width={923}
               height={899}
               alt=""
             />
+            <Image
+              className="w-full h-full lg:hidden"
+              src="/assets/images/image 46.png"
+              width={923}
+              height={899}
+              alt=""
+            />
           </div>
-          <div className="-mt-[45%] md:-mt-[30%] lg:-mt-0 order-first w-full lg:pl-16 px-5 lg:px-0">
+          <div className="-mt-[47%] md:-mt-[30%] lg:-mt-0 order-first w-full lg:pl-16 px-5 lg:px-0">
             <h1 className="text-4xl md:text-6xl xl:text-[4.8rem] leading-none font-semibold text-[#53CCD1] pb-5">
               Alla{" "}
               <span className="text-white lg:text-[#404040]">
@@ -42,7 +130,7 @@ export default function Hero() {
           </div>
         </div>
       </section>
-      <section className="lg:hidden mx-3 pb-5 mt-3">
+      <section className="lg:hidden mx-3 pb-5 mt-3 z-30">
         <div className="font-inter">
           <p className="font-medium pt-3 text-[#adacac] text-sm">
             Se de senaste annonserna:
@@ -51,11 +139,11 @@ export default function Hero() {
             Hitta ditt nästa uppdrag!
           </h1>
         </div>
-        {userInfo.map((item, index) => {
+        {userInfo.map((item) => {
           return (
             <div
-              key={index}
-              className="flex justify-between items-center shadow-lg my-10 p-3 rounded-2xl"
+              key={item.id}
+              className="flex justify-between items-center shadow lg:shadow-lg my-10 p-3 rounded-2xl"
             >
               <div className="font-inter">
                 <h2 className="text-lg">{item.title}</h2>
@@ -65,11 +153,45 @@ export default function Hero() {
                 <p className="text-secondary text-sm">Läs mer</p>
               </div>
               <div className="flex flex-col justify-center items-center gap-4">
-                <div className="bg-[#d9d9d9] w-[50px] h-[50px] rounded-full"></div>
+                {item.elips && (
+                  <div>
+                    <Image
+                      src={item.elips}
+                      width={50}
+                      height={50}
+                      alt="Star Icon"
+                      className="rounded-full"
+                    />
+                  </div>
+                )}
+                {item.star && (
+                  <div>
+                    <Image
+                      src={item.star}
+                      width={30}
+                      height={30}
+                      alt="Star Icon"
+                    />
+                  </div>
+                )}
                 <div>
-                  <span className="text-sm bg-secondary text-white px-3 py-2 rounded-xl">
-                    Chatta nu
-                  </span>
+                  {item.message && (
+                    <div className="bg-secondary rounded-full p-1 ">
+                      <Image
+                        src={item.message}
+                        width={30}
+                        height={30}
+                        alt="Message Icon"
+                      />
+                    </div>
+                  )}
+                  {item.chat && (
+                    <div>
+                      <span className="text-sm bg-secondary text-white px-3 py-2 rounded-xl">
+                        {item.chat}
+                      </span>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -79,60 +201,3 @@ export default function Hero() {
     </>
   );
 }
-const userInfo = [
-  {
-    id: 1,
-    image: "/assets/images/Skärmavbild 2023-05-28 kl. 14.16 1.png",
-    title: "SSK, Avdelning, Stad",
-    name: "Företagests namn",
-    period: "Period",
-    info: "Info",
-    time: "320-400 kr/timme",
-    description:
-      "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text ",
-  },
-  {
-    id: 2,
-    image: "/assets/images/Skärmavbild 2023-05-28 kl. 14.16 1.png",
-    title: "SSK, Avdelning, Stad",
-    name: "Företagests namn",
-    period: "Period",
-    info: "Info",
-    time: "320-400 kr/timme",
-    description:
-      "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text ",
-  },
-  {
-    id: 3,
-    image: "/assets/images/Skärmavbild 2023-05-28 kl. 14.16 1.png",
-    title: "SSK, Avdelning, Stad",
-    name: "Företagests namn",
-    period: "Period",
-    info: "Info",
-    time: "320-400 kr/timme",
-    description:
-      "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text ",
-  },
-  {
-    id: 4,
-    image: "/assets/images/Skärmavbild 2023-05-28 kl. 14.16 1.png",
-    title: "SSK, Avdelning, Stad",
-    name: "Företagests namn",
-    period: "Period",
-    info: "Info",
-    time: "320-400 kr/timme",
-    description:
-      "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text ",
-  },
-  {
-    id: 5,
-    image: "/assets/images/Skärmavbild 2023-05-28 kl. 14.16 1.png",
-    title: "SSK, Avdelning, Stad",
-    name: "Företagests namn",
-    period: "Period",
-    info: "Info",
-    time: "320-400 kr/timme",
-    description:
-      "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text ",
-  },
-];

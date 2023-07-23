@@ -45,3 +45,16 @@ h3 {
 h4 {
   font-size: 1.3rem;
 }
+
+.overlay {
+  position: relative;
+}
+
+.overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  @apply bg-gradient-to-t from-[#fdfcfc] to-transparent;
+}
