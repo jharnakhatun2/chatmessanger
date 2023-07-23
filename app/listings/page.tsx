@@ -8,7 +8,7 @@ import Link from "next/link";
 
 interface CompType {
   id: number | string;
-  image?: string;
+  image: string;
   name: string;
   period: string;
   title: string;
